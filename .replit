@@ -27,3 +27,7 @@ args = "cd src && javac *.java && echo \"=== ShirtTest ===\" && java ShirtTest &
 
 [workflows.workflow.metadata]
 outputType = "console"
+
+[deployment]
+run = ["sh", "-c", "/nix/store/c8hr2f0b0dm685yx1dkp6bw24bpx495n-graalvm19-ce-22.3.1/bin/java -classpath .:target/dependency/* Main"]
+deploymentTarget = "cloudrun"

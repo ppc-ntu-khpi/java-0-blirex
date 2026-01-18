@@ -1,9 +1,9 @@
 public class Shirt {
-  public int shirtID = 0;
+  public int shirtID = 3;
   public String description = "-description required-";
   public char colorCode = 'U';
-  public double price = 0.0;
-  public int quantityInStock = 0;
+  public double price = 1400;
+  public int quantityInStock = 4;
   
   public void displayShirtInformation() {
     System.out.println("Shirt ID: " + shirtID);
