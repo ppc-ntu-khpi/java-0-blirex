@@ -1,0 +1,29 @@
+modules = ["java-graalvm22.3", "bash"]
+[agent]
+expertMode = true
+
+[nix]
+channel = "stable-25_05"
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Run Java Programs"
+
+[[workflows.workflow]]
+name = "Run Java Programs"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "cd src && javac *.java && echo \"=== ShirtTest ===\" && java ShirtTest && echo \"\" && echo \"=== QuotationTest ===\" && java QuotationTest"
+
+[workflows.workflow.metadata]
+outputType = "console"
