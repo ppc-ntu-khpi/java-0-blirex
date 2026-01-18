@@ -1,0 +1,25 @@
+# Java compiled files
+*.class
+
+# Build output
+build/
+out/
+target/
+
+# Gradle
+.gradle/
+gradle/
+
+# IDE files
+.idea/
+*.iml
+.project
+.classpath
+.settings/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Replit
+.cache/
